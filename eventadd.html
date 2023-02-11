@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Handle event</h1>
+        <h3 id="handler-status">Defult text</h3>
+        <button onclick="handleOnClick()">Handle by onclick</button>
+        <button id="listner">Handle by addlistner</button>
+
+        <h2 id="hi">Hi</h2>
+        <button id="btn-listner">Change Text by addListner</button>
+
+        <h2 id="hello">Hello</h2>
+        <button id="change">Chenge hi</button>
+
+
+        <Section style="margin-top: 50px;">
+            <p id="paragraph">Defult text</p>
+            <input type="text" name="" id="input-field">
+            <button id="btn-update">Update</button>
+        
+        </Section>
+        <Section style="margin-top: 50px;">
+            <p id="paragraph2">Defult text</p>
+            <input type="text" name="" id="input">
+            <button id="update">Update</button>
+        
+        </Section>
+
+
+        <script>
+            function handleOnClick(){
+                const handlerStatus = document.getElementById('handler-status');
+                handlerStatus.innerText = 'Handler change by onclick';
+            }
+
+
+            // option-2
+
+            document.getElementById('listner').addEventListener('click', function(){
+                const handle = document.getElementById('handler-status');
+                handle.innerText = "handle by add listner"
+            })
+
+
+            document.getElementById('btn-listner').addEventListener('click', function(){
+                const handler = document.getElementById('hi');
+                handler.innerText = "Hello"
+            })
+
+            document.getElementById('change').addEventListener('click', function(){
+                const handle = document.getElementById('hello');
+                handle.innerText = "HI I am Remon"
+            })
+
+            document.getElementById('btn-update').addEventListener('click', function(){
+                const inputField = document.getElementById('input-field');
+                const inputText = document.getElementById('paragraph');
+                inputText.innerText = inputField.value;
+                inputField.value ="";
+            })
+
+
+            document.getElementById('update').addEventListener('click', function(){
+                const inputField = document.getElementById('input');
+                const inputText = document.getElementById('paragraph2');
+                inputText.innerText= inputField.value;
+                inputField.value="";
+
+            })
+        </script>
+</body>
+</html>

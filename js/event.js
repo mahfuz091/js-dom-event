@@ -27,6 +27,7 @@ makeGreenButton.addEventListener("click", function makeGreen() {
     document.body.style.backgroundColor = 'green';
 })
 
-document.getElementById('make-goldenrod').addEventListener('click', function () {
+document.getElementById('make-goldenrod').addEventListener('', function (keyup) {
     document.body.style.backgroundColor = 'goldenrod';
 })
+keyup
